@@ -44,6 +44,7 @@
     "extension": "latest",
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
     "tslib": "^2.7.0",
     "typescript": "5.3.3",
     "typescript-eslint": "^8.7.0",
