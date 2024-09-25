@@ -24,7 +24,24 @@
     "start": "extension start",
     "build": "extension build"
   },
+  "dependencies": {
+    "daisyui": "^4.12.10",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "tailwindcss": "^3.4.1"
+  },
   "devDependencies": {
-    "extension": "latest"
+    "@swc/core": "^1.7.28",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "acorn": "^8.12.1",
+    "ajv": "^8.17.1",
+    "autoprefixer": "^10.4.20",
+    "browserslist": "^4.24.0",
+    "extension": "latest",
+    "postcss": "^8.4.47",
+    "tslib": "^2.7.0",
+    "typescript": "5.3.3",
+    "webpack": "^5.94.0"
   }
 }
