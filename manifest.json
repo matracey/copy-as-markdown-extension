@@ -6,12 +6,16 @@
   "description": "An Extension.js example.",
   "icons": {
     "16": "images/extension_16.png",
-    "48": "images/extension_48.png"
+    "32": "images/extension_32.png",
+    "48": "images/extension_48.png",
+    "128": "images/extension_128.png"
   },
   "action": {
     "default_icon": {
       "16": "images/extension_16.png",
-      "48": "images/extension_48.png"
+      "32": "images/extension_32.png",
+      "48": "images/extension_48.png",
+      "128": "images/extension_128.png"
     },
     "default_title": "My App",
     "default_popup": "./action/index.html"
