@@ -1,23 +1,24 @@
 {
   "name": "copy-as-markdown-extension",
-  "description": "An Extension.js example.",
-  "version": "0.0.1",
+  "description": "Adds a context menu option to copy selected HTML content as Markdown.",
+  "version": "0.0.2",
   "keywords": [
+    "markdown",
+    "utility",
+    "developer-tools",
     "extension",
     "browser-extension",
-    "web-extension",
-    "template"
+    "web-extension"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/extension-js/extension.git",
-    "directory": "examples/init"
+    "url": "https://github.com/matracey/copy-as-markdown-extension.git"
   },
   "author": {
-    "name": "Your Name",
-    "email": "your@email.com",
-    "url": "https://yourwebsite.com"
+    "name": "Martin Tracey",
+    "email": "martin.d.tracey@outlook.com",
+    "url": "https://github.com/matracey"
   },
   "scripts": {
     "dev": "run-s build:images && extension dev",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@eslint/js": "^9.11.1",
     "@swc/core": "^1.7.28",
+    "@types/chrome": "^0.0.272",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "acorn": "^8.12.1",
