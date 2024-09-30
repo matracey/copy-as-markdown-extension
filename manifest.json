@@ -8,6 +8,12 @@
   "background": {
     "service_worker": "background.ts"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.ts"]
+    }
+  ],
   "icons": {
     "16": "images/extension_16.png",
     "32": "images/extension_32.png",
