@@ -5,6 +5,9 @@
   "name": "Copy as Markdown",
   "description": "Adds a context menu option to copy selected HTML content as Markdown.",
   "permissions": ["activeTab", "clipboardWrite", "contextMenus"],
+  "background": {
+    "service_worker": "background.ts"
+  },
   "icons": {
     "16": "images/extension_16.png",
     "32": "images/extension_32.png",
