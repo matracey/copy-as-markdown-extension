@@ -1,7 +1,11 @@
 import { Actions } from "./actions";
 
+import TurndownService from "turndown";
+
 {
-  chrome.runtime.onMessage.addListener(async request => {
+  const turndownService = new TurndownService();
+
+  chrome.runtime.onMessage.addListener(async (request, _, response) => {
     if (request?.type === Actions.COPY_AS_MARKDOWN) {
       const selection = window.getSelection();
       if (!selection?.rangeCount) {
@@ -12,7 +16,10 @@ import { Actions } from "./actions";
       for (let i = 0, len = selection.rangeCount; i < len; ++i) {
         container.appendChild(selection.getRangeAt(i).cloneContents());
       }
-      console.log(`Selected HTML content: ${container.innerHTML}`);
+      const markdownContent = turndownService.turndown(container.innerHTML);
+
+      await navigator.clipboard.writeText(markdownContent);
+      response({ markdownContent });
     }
   });
 }
