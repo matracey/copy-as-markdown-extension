@@ -17,9 +17,10 @@ import { Actions } from './actions';
         return;
       }
 
-      console.info(`Sending ${Actions.COPY_AS_MARKDOWN} message to tab: ${tab.id}`);
-      const response = await chrome.tabs.sendMessage(tab.id, { type: Actions.COPY_AS_MARKDOWN });
-      console.info("Copied as Markdown:", response?.markdownContent);
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["scripts/copySelectionAsMarkdown.js"],
+      });
     }
   });
 }

@@ -4,16 +4,10 @@
   "version": "0.1.0",
   "name": "Copy as Markdown",
   "description": "Adds a context menu option to copy selected HTML content as Markdown.",
-  "permissions": ["activeTab", "clipboardWrite", "contextMenus"],
+  "permissions": ["activeTab", "clipboardWrite", "contextMenus", "scripting"],
   "background": {
     "service_worker": "background.ts"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content-script.ts"]
-    }
-  ],
   "icons": {
     "16": "images/extension_16.png",
     "32": "images/extension_32.png",
@@ -27,7 +21,7 @@
       "48": "images/extension_48.png",
       "128": "images/extension_128.png"
     },
-    "default_title": "My App",
+    "default_title": "Copy as Markdown",
     "default_popup": "./action/index.html"
   },
   "author": "Martin Tracey"

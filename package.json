@@ -23,8 +23,7 @@
   "scripts": {
     "dev": "run-s build:images && extension dev",
     "start": "run-s build:images && extension start",
-    "build": "run-s build:images && extension build && run-s postbuild",
-    "postbuild": "rm -f dist/chrome/manifest.1.json && jq -r 'del(.content_scripts[].css)' dist/chrome/manifest.json > dist/chrome/manifest.1.json && rm -f dist/chrome/manifest.json && mv dist/chrome/manifest.1.json dist/chrome/manifest.json",
+    "build": "run-s build:images && extension build",
     "build:images": "node images.mjs",
     "postinstall": "run-s build:images"
   },
