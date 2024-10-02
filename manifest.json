@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
   "manifest_version": 3,
-  "version": "0.0.2",
+  "version": "0.1.0",
   "name": "Copy as Markdown",
   "description": "Adds a context menu option to copy selected HTML content as Markdown.",
   "permissions": ["activeTab", "clipboardWrite", "contextMenus"],
